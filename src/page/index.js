@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
-import { MainNav } from "../component/nav";
+import { Nav } from "../component/nav";
 
 export class IndexPage extends React.Component {
     constructor(props) {
@@ -14,7 +14,7 @@ export class IndexPage extends React.Component {
     render() {
         return (
             <Layout>
-                <MainNav/>
+                <Nav history={this.props.history}/>
             </Layout>
         );
     }
