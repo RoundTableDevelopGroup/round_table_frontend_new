@@ -1,6 +1,5 @@
 import React from 'react';
-import { Layout, Icon, Row, Col, Menu, Input, Dropdown, Badge, Avatar, Button } from 'antd';
-import { Link } from 'react-router-dom';
+import { Layout, Icon, Row, Col, Menu, Input, Dropdown, Avatar, Button } from 'antd';
 import request from 'axios';
 
 const { Header } = Layout;
@@ -121,6 +120,8 @@ export class Nav extends React.Component {
                                                 break;
                                             case 'logout':
                                                 // TODO
+                                                break;
+                                            default:
                                                 break;
                                         }
                                     }}>
