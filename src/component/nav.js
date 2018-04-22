@@ -62,8 +62,7 @@ export class Nav extends React.Component {
             }}>
                 {this.state.linkLoadDone&&this.state.userLoadDone?
                     <Row>
-                        <Col className={'logo-col'}
-                             xs={{span: 0, offset: 0}}
+                        <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
                              lg={{span: 2, offset: 3}}>
@@ -71,8 +70,7 @@ export class Nav extends React.Component {
                                 <Icon type={'chrome'}/>&nbsp;圆桌
                             </span>
                         </Col>
-                        <Col className={'link-col'}
-                             xs={{span: 0, offset: 0}}
+                        <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
                              lg={{span: 4, offset: 1}}>
@@ -92,8 +90,7 @@ export class Nav extends React.Component {
                                 <Menu.Item key={'/match'}>赛事</Menu.Item>
                             </Menu>
                         </Col>
-                        <Col className={'search-col'}
-                             xs={{span: 0, offset: 0}}
+                        <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
                              lg={{span: 6, offset: 2}}>
@@ -102,8 +99,7 @@ export class Nav extends React.Component {
                                     context => console.log(context)
                                 }/>
                         </Col>
-                        <Col className={'user-col'}
-                             xs={{span: 0, offset: 0}}
+                        <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
                              lg={{span: 3, offset: 0}}
@@ -125,14 +121,16 @@ export class Nav extends React.Component {
                                                 break;
                                         }
                                     }}>
-                                        <Menu.Item key={'home'}>&nbsp;&nbsp;个人主页&nbsp;&nbsp;</Menu.Item>
+                                        <Menu.Item key={'home/self'}>&nbsp;&nbsp;个人主页&nbsp;&nbsp;</Menu.Item>
                                         <Menu.Item key={'setting'}>&nbsp;&nbsp;设置&nbsp;&nbsp;</Menu.Item>
                                         <Menu.Item key={'logout'}>&nbsp;&nbsp;注销&nbsp;&nbsp;</Menu.Item>
                                     </Menu>
                                 )} placement={'bottomCenter'}>
                                     <Avatar icon={'user'}/>
                                 </Dropdown>:
-                                <Button>登录</Button>
+                                <Button onClick={() => {
+                                    this.props.history.push('/user/login')
+                                }}>加入圆桌</Button>
                             }
                         </Col>
                     </Row>:''
