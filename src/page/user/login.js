@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Layout } from 'antd';
 import '../../css/user/login.css';
+import {LoginForm} from "../../component/user/login-form";
 
 const { Content } = Layout;
 
@@ -27,7 +28,11 @@ export class UserLoginPage extends React.Component {
                     <Row type={'flex'} align={'middle'} justify={'center'} style={{
                         height: '100%'
                     }}>
-
+                        <Row style={{
+                            width: '20%'
+                        }}>
+                            <LoginForm/>
+                        </Row>
                     </Row>
                 </Content>
             </Layout>
