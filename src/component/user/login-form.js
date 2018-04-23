@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Icon, Checkbox, Button } from 'antd';
+import { PasswordTool } from '../../tool/password';
 
 /**
  * @props history: 路由历史
@@ -28,8 +29,7 @@ export class LoginForm extends React.Component {
     };
 
     onLoginButtonClick = () => {
-        console.log(this.state.username);
-        console.log(this.state.password);
+        // TODO
     };
 
     render() {

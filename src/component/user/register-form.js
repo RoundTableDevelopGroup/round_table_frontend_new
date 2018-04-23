@@ -1,5 +1,7 @@
 import React from 'react';
 import { Form, Input, Icon, Checkbox, Button } from 'antd';
+import { PasswordTool } from "../../tool/password";
+import request from 'axios';
 
 /**
  * @props history: 路由历史
@@ -28,8 +30,8 @@ export class RegisterForm extends React.Component {
     };
 
     onLoginButtonClick = () => {
-        console.log(this.state.username);
-        console.log(this.state.password);
+        let passwordHash = PasswordTool.getHashWithSalt(this.state.password, PasswordTool.getRandomSalt());
+        // TODO
     };
 
     render() {
