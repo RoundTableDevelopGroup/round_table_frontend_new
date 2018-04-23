@@ -3,9 +3,9 @@ import { Form, Input, Icon, Checkbox, Button } from 'antd';
 
 /**
  * @props history: 路由历史
- * @props onRegisterLinkClick: 注册链接回调
+ * @props onLoginLinkClick: 登录链接回调
  */
-export class LoginForm extends React.Component {
+export class RegisterForm extends React.Component {
     constructor(props) {
         super(props);
 
@@ -54,10 +54,10 @@ export class LoginForm extends React.Component {
                         <a style={{
                             float: 'right',
                             color: 'grey'
-                        }} onClick={this.props.onRegisterLinkClick}>注册账号</a>
+                        }} onClick={this.props.onLoginLinkClick}>转到登录</a>
                         <Button type={'primary'} style={{
                             width: '100%'
-                        }} onClick={this.onLoginButtonClick}>登录</Button>
+                        }} onClick={this.onLoginButtonClick}>注册</Button>
                         <a style={{
                             color: 'grey'
                         }}>社交账号登录</a>

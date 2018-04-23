@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Layout } from 'antd';
 import '../../css/user/login.css';
 import {LoginForm} from "../../component/user/login-form";
+import {RegisterForm} from "../../component/user/register-form";
 
 const { Content } = Layout;
 
@@ -13,9 +14,15 @@ export class UserLoginPage extends React.Component {
         document.getElementById('root').className = 'user-login';
 
         this.state = {
-
+            isRegisterForm: true
         }
     }
+
+    changeFormState = () => {
+        this.setState(prevState => ({
+            isRegisterForm: !prevState.isRegisterForm
+        }));
+    };
 
     render() {
         return (
@@ -29,9 +36,12 @@ export class UserLoginPage extends React.Component {
                         height: '100%'
                     }}>
                         <Row style={{
-                            width: '20%'
+                            width: '25%'
                         }}>
-                            <LoginForm/>
+                            {this.state.isRegisterForm?
+                                (<RegisterForm history={this.props.history} onLoginLinkClick={this.changeFormState}/>):
+                                (<LoginForm hittory={this.props.history} onRegisterLinkClick={this.changeFormState}/>)
+                            }
                         </Row>
                     </Row>
                 </Content>
