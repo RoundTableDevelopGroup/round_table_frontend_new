@@ -1,8 +1,9 @@
 import React from 'react';
-import { Row, Col, Layout } from 'antd';
+import { Row, Layout, Col } from 'antd';
 import '../../css/user/login.css';
-import {LoginForm} from "../../component/user/login-form";
-import {RegisterForm} from "../../component/user/register-form";
+import { LoginForm } from "../../component/user/login-form";
+import { RegisterForm } from "../../component/user/register-form";
+import logo5 from '../../img/logo/logo5.png';
 
 const { Content } = Layout;
 
@@ -35,14 +36,29 @@ export class UserLoginPage extends React.Component {
                     <Row type={'flex'} align={'middle'} justify={'center'} style={{
                         height: '100%'
                     }}>
-                        <Row style={{
-                            width: '25%'
-                        }}>
-                            {this.state.isRegisterForm?
-                                (<RegisterForm history={this.props.history} onLoginLinkClick={this.changeFormState}/>):
-                                (<LoginForm hittory={this.props.history} onRegisterLinkClick={this.changeFormState}/>)
-                            }
-                        </Row>
+                        <Col xs={{span: 20, offset: 0}}
+                             sm={{span: 16, offset: 0}}
+                             md={{span: 12, offset: 0}}
+                             lg={{span: 8, offset: 0}}>
+                            <div style={{
+                                padding: '30px',
+                                backgroundColor: 'white',
+                                boxShadow: '0 0 10px #cccccc'
+                            }}>
+
+                                <img alt={'圆桌游戏-logo'} src={logo5} style={{
+                                    display: 'block',
+                                    margin: 'auto',
+                                    width: '50%',
+                                    height: 'auto'
+                                }}/>
+                                <br/>
+                                {this.state.isRegisterForm?
+                                    (<RegisterForm history={this.props.history} onLoginLinkClick={this.changeFormState}/>):
+                                    (<LoginForm hittory={this.props.history} onRegisterLinkClick={this.changeFormState}/>)
+                                }
+                            </div>
+                        </Col>
                     </Row>
                 </Content>
             </Layout>

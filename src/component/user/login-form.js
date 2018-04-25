@@ -12,7 +12,12 @@ export class LoginForm extends React.Component {
 
         this.state = {
             username: '',
-            password: ''
+            usernameFail: false,
+            usernameHelp: '',
+
+            password: '',
+            passwordFail: false,
+            passwordHelp: ''
         }
     }
 
@@ -36,19 +41,44 @@ export class LoginForm extends React.Component {
         return (
             <div>
                 <Form>
-                    <Form.Item>
-                        <Input prefix={<Icon type={'user'}/>}
-                               placeholder={' 用户名'}
-                               value={this.state.username}
-                               onChange={this.onUsernameChange}/>
-                    </Form.Item>
-                    <Form.Item>
-                        <Input prefix={<Icon type={'key'}/>}
-                               placeholder={' 密码'}
-                               type={'password'}
-                               value={this.state.password}
-                               onChange={this.onPasswordChange}/>
-                    </Form.Item>
+                    {this.state.usernameFail?(
+                        <Form.Item
+                            hasFeedback
+                            validateStatus={'error'}
+                            help={this.state.usernameHelp}>
+                            <Input prefix={<Icon type={'user'}/>}
+                                   placeholder={' 用户名'}
+                                   value={this.state.username}
+                                   onChange={this.onUsernameChange}/>
+                        </Form.Item>
+                    ):(
+                        <Form.Item>
+                            <Input prefix={<Icon type={'user'}/>}
+                                   placeholder={' 用户名'}
+                                   value={this.state.username}
+                                   onChange={this.onUsernameChange}/>
+                        </Form.Item>
+                    )}
+                    {this.state.passwordHelp?(
+                        <Form.Item
+                            hasFeedback
+                            validateStatus={'error'}
+                            help={this.state.passwordHelp}>
+                            <Input prefix={<Icon type={'key'}/>}
+                                   placeholder={' 密码'}
+                                   type={'password'}
+                                   value={this.state.password}
+                                   onChange={this.onPasswordChange}/>
+                        </Form.Item>
+                    ):(
+                        <Form.Item>
+                            <Input prefix={<Icon type={'key'}/>}
+                                   placeholder={' 密码'}
+                                   type={'password'}
+                                   value={this.state.password}
+                                   onChange={this.onPasswordChange}/>
+                        </Form.Item>
+                    )}
                     <Form.Item>
                         <Checkbox>记住我</Checkbox>
                         <a style={{
