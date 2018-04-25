@@ -46,7 +46,7 @@ export class UserLoginPage extends React.Component {
                                 boxShadow: '0 0 10px #cccccc'
                             }}>
 
-                                <img alt={'圆桌游戏-logo'} src={logo5} style={{
+                                <img alt={'logo'} src={logo5} style={{
                                     display: 'block',
                                     margin: 'auto',
                                     width: '50%',

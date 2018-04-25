@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Icon, Row, Col, Menu, Input, Dropdown, Avatar, Button } from 'antd';
 import request from 'axios';
+import logo2 from '../img/logo/logo2.png';
 
 const { Header } = Layout;
 
@@ -65,15 +66,21 @@ export class Nav extends React.Component {
                         <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
-                             lg={{span: 2, offset: 3}}>
-                            <span style={{ fontSize: "20px" }}>
-                                <Icon type={'chrome'}/>&nbsp;圆桌
+                             lg={{span: 3, offset: 3}}>
+                            <span>
+                                <img alt={'logo'} src={logo2} width={'40px'} style={{
+                                    paddingBottom: '18px'
+                                }}/>
+                                <span style={{
+                                    fontSize: '30px',
+                                    fontFamily: '幼圆'
+                                }}>圆桌</span>
                             </span>
                         </Col>
                         <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
-                             lg={{span: 4, offset: 1}}>
+                             lg={{span: 5, offset: 1}}>
                             <Menu mode={'horizontal'}
                                 style={{ lineHeight: '63px' }}
                                 onClick={(e) => {
@@ -93,7 +100,7 @@ export class Nav extends React.Component {
                         <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
-                             lg={{span: 6, offset: 2}}>
+                             lg={{span: 4, offset: 2}}>
                             <Input.Search placeholder={'发现'}
                                 onSearch={
                                     context => console.log(context)
