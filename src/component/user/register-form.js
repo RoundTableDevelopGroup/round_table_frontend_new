@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Icon, Checkbox, Button } from 'antd';
+import { Form, Input, Icon, message, Button } from 'antd';
 import { PasswordTool } from "../../tool/password";
 import request from 'axios';
 
@@ -45,8 +45,6 @@ export class RegisterForm extends React.Component {
     };
 
     onLoginButtonClick = () => {
-        // let passwordHash = PasswordTool.getHashWithSalt(this.state.password, PasswordTool.getRandomSalt());
-
         // 正则表达式
         let usernameRegex = /^[a-zA-Z][a-zA-Z0-9_]{7,19}$/;
         let passwordRegex = /^[a-zA-Z0-9`~!@#$%^&*()\-=_+[\]{};:'",.<>/?]{8,20}$/;
@@ -69,7 +67,35 @@ export class RegisterForm extends React.Component {
                 password2Help: ''
             });
 
-            // TODO
+            // 加密密码
+            let salt = PasswordTool.getRandomSalt();
+            let passwordHash = PasswordTool.getHashWithSalt(this.state.password, salt);
+            // 发送注册请求
+            request
+                .post('/request/user/register', {
+                    username: this.state.username,
+                    password: passwordHash,
+                    salt: salt
+                })
+                .then((response) => {
+                    if (response.data.success) {
+                        message.success('注册成功，即将为您跳转!');
+                        setTimeout(() => {
+                            this.props.history.push('/');
+                        }, 2000);
+                    } else {
+                        let failReason = '';
+                        switch (response.data.error_code) {
+                            case 200:
+                                failReason = '用户名已经存在';
+                                break;
+                            default:
+                                failReason = '未知错误';
+                                break;
+                        }
+                        message.error(failReason);
+                    }
+                });
         } else {
             if (usernameRegexSuccess) {
                 this.setState({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Icon, Row, Col, Menu, Input, Dropdown, Avatar, Button } from 'antd';
+import { Layout, message, Row, Col, Menu, Input, Dropdown, Avatar, Button } from 'antd';
 import request from 'axios';
 import logo2 from '../img/logo/logo2.png';
 
@@ -122,7 +122,16 @@ export class Nav extends React.Component {
                                                 this.props.history.push('/user/' + e.key);
                                                 break;
                                             case 'logout':
-                                                // TODO
+                                                request
+                                                    .get('/request/user/logout')
+                                                    .then((response) => {
+                                                        if (response.data.success) {
+                                                            message.success('注销成功');
+                                                            setTimeout(() => {
+                                                                this.props.history.push('/user/login');
+                                                            }, 2000);
+                                                        }
+                                                    });
                                                 break;
                                             default:
                                                 break;
