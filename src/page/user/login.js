@@ -55,7 +55,7 @@ export class UserLoginPage extends React.Component {
                                 <br/>
                                 {this.state.isRegisterForm?
                                     (<RegisterForm history={this.props.history} onLoginLinkClick={this.changeFormState}/>):
-                                    (<LoginForm hittory={this.props.history} onRegisterLinkClick={this.changeFormState}/>)
+                                    (<LoginForm history={this.props.history} onRegisterLinkClick={this.changeFormState}/>)
                                 }
                             </div>
                         </Col>

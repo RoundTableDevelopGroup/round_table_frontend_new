@@ -23,7 +23,7 @@ export class RegisterForm extends React.Component {
             password2: '',
             password2Fail: false,
             password2Help: ''
-        }
+        };
     }
 
     onUsernameChange = (e) => {

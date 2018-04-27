@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, Input, Icon, Checkbox, Button } from 'antd';
+import { Form, Input, Icon, Checkbox, Button, message } from 'antd';
 import { PasswordTool } from '../../tool/password';
+import request from 'axios';
 
 /**
  * @props history: 路由历史
@@ -18,7 +19,9 @@ export class LoginForm extends React.Component {
             password: '',
             passwordFail: false,
             passwordHelp: ''
-        }
+        };
+
+        console.log(this.props.history);
     }
 
     onUsernameChange = (e) => {
@@ -34,7 +37,65 @@ export class LoginForm extends React.Component {
     };
 
     onLoginButtonClick = () => {
-        // TODO
+        // 发送请求获取用户名对应的盐
+        request
+            .post('/request/user/get_salt', {
+                username: this.state.username
+            })
+            .then((response) => {
+                // 如果获取盐成功了
+                if (response.data.success) {
+                    // 发送请求进行登录校验
+                    request
+                        .post('/request/user/login', {
+                            username: this.state.username,
+                            password: PasswordTool.getHashWithSalt(this.state.password, response.data.salt)
+                        })
+                        .then((response2) => {
+                            if (response2.data.success) {
+                                this.setState({
+                                    usernameFail: false,
+                                    passwordFail: false
+                                });
+                                message.success('登录成功，即将为您跳转');
+                                setTimeout(() => {
+                                    this.props.history.push('/');
+                                }, 2000)
+                            } else {
+                                switch (response2.data.error_code) {
+                                    case 200:
+                                        this.setState({
+                                            usernameFail: true
+                                        });
+                                        message.error('用户不存在');
+                                        break;
+                                    case 201:
+                                        this.setState({
+                                            usernameFail: true,
+                                            passwordFail: true
+                                        });
+                                        message.error('用户名或密码错误');
+                                        break;
+                                    default:
+                                        message.error('未知错误');
+                                        break;
+                                }
+                            }
+                        });
+                } else {
+                    switch (response.data.error_code) {
+                        case 200:
+                            this.setState({
+                                usernameFail: true
+                            });
+                            message.error('用户不存在');
+                            break;
+                        default:
+                            message.error('未知错误');
+                            break;
+                    }
+                }
+            });
     };
 
     render() {
@@ -59,7 +120,7 @@ export class LoginForm extends React.Component {
                                    onChange={this.onUsernameChange}/>
                         </Form.Item>
                     )}
-                    {this.state.passwordHelp?(
+                    {this.state.passwordFail?(
                         <Form.Item
                             hasFeedback
                             validateStatus={'error'}
