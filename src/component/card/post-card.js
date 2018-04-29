@@ -15,7 +15,7 @@ export class PostCard extends React.Component {
                     <div>
                         <span style={{
                             color: 'grey'
-                        }}>来自频道:&nbsp;</span>
+                        }}>一小时前，来自频道:&nbsp;</span>
                         <Tag color={'red'}>绝地求生</Tag>
                     </div>
                     <br/>
