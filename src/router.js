@@ -5,6 +5,7 @@ import { UserLoginPage } from "./page/user/login";
 import { MatchIndexPage } from "./page/match";
 import { ChannelIndexPage } from "./page/channel";
 import { ChannelPerPage } from "./page/channel/per";
+import { AdminFilePage } from "./page/admin/file";
 
 export class MainRouter extends React.Component {
     render() {
@@ -18,8 +19,9 @@ export class MainRouter extends React.Component {
                     <Route exact path={'/match'} component={MatchIndexPage}/>
 
                     <Route exact path={'/channel'} component={ChannelIndexPage}/>
-
                     <Route exact path={'/channel/:channelId'} component={ChannelPerPage}/>
+
+                    <Route exact path={'/admin/file'} component={AdminFilePage}/>
                 </Switch>
             </BrowserRouter>
         );

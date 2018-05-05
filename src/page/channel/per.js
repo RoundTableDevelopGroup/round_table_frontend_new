@@ -28,7 +28,8 @@ export class ChannelPerPage extends React.Component {
                         channelInfoReady: true,
                         channelInfo: {
                             'name': response.data.name,
-                            'hot': response.data.hot
+                            'hot': response.data.hot,
+                            'picture': response.data.picture
                         }
                     })
                 }

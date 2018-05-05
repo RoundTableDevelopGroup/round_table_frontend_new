@@ -19,8 +19,8 @@ export class ChannelHeaderCard extends React.Component {
                         <Col xs={{span: 0, offset: 0}}
                              sm={{span: 0, offset: 0}}
                              md={{span: 0, offset: 0}}
-                             lg={{span: 16, offset: 4}}>
-                            <h2>{this.props.channelInfo.name}</h2>
+                             lg={{span: 4, offset: 4}}>
+
                         </Col>
                     </Row>
                 </Col>
