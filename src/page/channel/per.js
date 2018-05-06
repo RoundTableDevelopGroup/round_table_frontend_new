@@ -29,7 +29,9 @@ export class ChannelPerPage extends React.Component {
                         channelInfo: {
                             'name': response.data.name,
                             'hot': response.data.hot,
-                            'picture': response.data.picture
+                            'picture': response.data.picture,
+                            'description': response.data.description,
+                            'type': response.data.type
                         }
                     })
                 }
@@ -44,7 +46,14 @@ export class ChannelPerPage extends React.Component {
                     paddingTop: '64px',
                     backgroundColor: '#f6f6f5'
                 }}>
-                    {this.state.channelInfoReady?<ChannelHeaderCard channelInfo={this.state.channelInfo}/>:null}
+                    <Row>
+                        <Col xs={{span: 0, offset: 0}}
+                             sm={{span: 0, offset: 0}}
+                             md={{span: 0, offset: 0}}
+                             lg={{span: 12, offset: 3}}>
+                            {this.state.channelInfoReady?<ChannelHeaderCard channelInfo={this.state.channelInfo}/>:null}
+                        </Col>
+                    </Row>
                 </Content>
             </Layout>
         );
