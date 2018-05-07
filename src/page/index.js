@@ -16,17 +16,17 @@ export class IndexPage extends React.Component {
 
     render() {
         return (
-            <Layout>
+            <Layout style={{
+                backgroundColor: '#f6f6f5'
+            }}>
                 <Nav history={this.props.history}/>
-                <Content style={{
+                <Content className={'fixed-width'}
+                    style={{
                     paddingTop: '64px',
                     backgroundColor: '#f6f6f5'
                 }}>
                     <Row>
-                        <Col xs={{span: 0, offset: 0}}
-                             sm={{span: 0, offset: 0}}
-                             md={{span: 0, offset: 0}}
-                             lg={{span: 12, offset: 3}}>
+                        <Col span={12} offset={3}>
                             <IndexCardList/>
                         </Col>
                     </Row>

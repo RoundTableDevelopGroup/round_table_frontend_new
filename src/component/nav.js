@@ -62,11 +62,8 @@ export class Nav extends React.Component {
                 width: '100%'
             }}>
                 {this.state.linkLoadDone&&this.state.userLoadDone?
-                    <Row>
-                        <Col xs={{span: 0, offset: 0}}
-                             sm={{span: 0, offset: 0}}
-                             md={{span: 0, offset: 0}}
-                             lg={{span: 3, offset: 3}}>
+                    <Row className={'fixed-width'}>
+                        <Col span={3} offset={3}>
                             <span>
                                 <img alt={'logo'} src={logo2} width={'40px'} style={{
                                     paddingBottom: '18px'
@@ -77,10 +74,7 @@ export class Nav extends React.Component {
                                 }}>圆桌</span>
                             </span>
                         </Col>
-                        <Col xs={{span: 0, offset: 0}}
-                             sm={{span: 0, offset: 0}}
-                             md={{span: 0, offset: 0}}
-                             lg={{span: 5, offset: 1}}>
+                        <Col span={5} offset={1}>
                             <Menu mode={'horizontal'}
                                 style={{ lineHeight: '63px' }}
                                 onClick={(e) => {
@@ -97,19 +91,13 @@ export class Nav extends React.Component {
                                 <Menu.Item key={'/match'}>赛事</Menu.Item>
                             </Menu>
                         </Col>
-                        <Col xs={{span: 0, offset: 0}}
-                             sm={{span: 0, offset: 0}}
-                             md={{span: 0, offset: 0}}
-                             lg={{span: 4, offset: 2}}>
+                        <Col span={4} offset={2}>
                             <Input.Search placeholder={'发现'}
                                 onSearch={
                                     context => console.log(context)
                                 }/>
                         </Col>
-                        <Col xs={{span: 0, offset: 0}}
-                             sm={{span: 0, offset: 0}}
-                             md={{span: 0, offset: 0}}
-                             lg={{span: 3, offset: 0}}
+                        <Col span={3} offset={0}
                              align={'right'}>
                             {this.state.userInfo.login?
                                 <Dropdown overlay={(

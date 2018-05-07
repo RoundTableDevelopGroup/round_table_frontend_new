@@ -3,4 +3,10 @@
  *************************/
 body {
     background-color: #f6f6f5;
+    margin: 0 auto;
+}
+
+.fixed-width {
+    width: 1440px;
+    margin: 0 auto
 }
