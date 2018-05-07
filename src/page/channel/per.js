@@ -76,7 +76,13 @@ export class ChannelPerPage extends React.Component {
                         }}>
                             <Row className={'fixed-width'}>
                                 <Col span={18} offset={3}>
-                                    {this.state.channelInfoReady?<ChannelHeaderCard channelInfo={this.state.channelInfo}/>:null}
+                                    {this.state.channelInfoReady?
+                                        <ChannelHeaderCard
+                                            channelInfo={this.state.channelInfo}
+                                            channelId={this.props.match.params.channelId}
+                                            history={this.props.history}/>:
+                                        null
+                                    }
                                 </Col>
                             </Row>
                         </Col>

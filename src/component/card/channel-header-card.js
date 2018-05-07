@@ -1,7 +1,55 @@
 import React from 'react';
 import { Row, Col, Divider, Button } from 'antd';
+import axios from 'axios';
 
 export class ChannelHeaderCard extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            attentionButtonActive: false,
+            attentionButtonLoadDown: false,
+            userLogin: false
+        }
+    }
+
+    componentDidMount() {
+        // 发送请求看用户是否已经关注过这个频道
+        axios
+            .post('/request/channel/is_user_attention_the_channel', {
+                channel: this.props.channelId
+            })
+            .then((response) => {
+                if (response.data.success) {
+                    if (response.data.attention) {
+                        this.setState({
+                            attentionButtonLoadDown: true,
+                            attentionButtonActive: true,
+                            userLogin: true
+                        });
+                    } else {
+                        this.setState({
+                            attentionButtonLoadDown: true,
+                            attentionButtonActive: false,
+                            userLogin: true
+                        });
+                    }
+                } else {
+                    switch (response.data.error_code) {
+                        case 200:
+                            this.setState({
+                                attentionButtonLoadDown: true,
+                                attentionButtonActive: false,
+                                userLogin: false
+                            });
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            })
+    }
+
     render() {
         return (
             <Row style={{
@@ -59,9 +107,45 @@ export class ChannelHeaderCard extends React.Component {
                         marginTop: '20px'
                     }}>
                         <Col span={24}>
-                            <Button style={{
-                                width: '100%'
-                            }}>关注</Button>
+                            {this.state.attentionButtonLoadDown?
+                                this.state.attentionButtonActive?(
+                                    <Button type={'primary'} style={{
+                                        width: '100%'
+                                    }} onClick={() => {
+                                        axios
+                                            .post('/request/channel/user_un_attention_channel', {
+                                                channel: this.props.channelId
+                                            })
+                                            .then((response) => {
+                                                if (response.data.success) {
+                                                    this.setState({
+                                                        attentionButtonActive: false
+                                                    });
+                                                }
+                                            })
+                                    }}>取消关注</Button>
+                                ):this.state.userLogin?
+                                    (<Button style={{
+                                        width: '100%'
+                                    }} onClick={() => {
+                                        axios
+                                            .post('/request/channel/user_attention_channel', {
+                                                channel: this.props.channelId
+                                            })
+                                            .then((response) => {
+                                                if (response.data.success) {
+                                                    this.setState({
+                                                        attentionButtonActive: true,
+                                                    });
+                                                }
+                                            })
+                                    }}>关注</Button>):
+                                    (<Button style={{
+                                        width: '100%'
+                                    }} onClick={() => {
+                                        this.props.history.push('/user/login')
+                                    }}>关注</Button>):null
+                            }
                         </Col>
                     </Row>
                 </Col>
