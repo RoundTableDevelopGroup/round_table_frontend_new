@@ -66,11 +66,19 @@ export class ChannelPerPage extends React.Component {
                 <Nav history={this.props.history}/>
                 <Content className={'fixed-width'} style={{
                     paddingTop: '64px',
-                    backgroundColor: '#f6f6f5'
+                    backgroundColor: '#f6f6f5',
+                    width: '100%'
                 }}>
                     <Row>
-                        <Col span={18} offset={3}>
-                            {this.state.channelInfoReady?<ChannelHeaderCard channelInfo={this.state.channelInfo}/>:null}
+                        <Col span={24} style={{
+                            backgroundColor: 'white',
+                            boxShadow: '0 0 10px #aaaaaa'
+                        }}>
+                            <Row className={'fixed-width'}>
+                                <Col span={18} offset={3}>
+                                    {this.state.channelInfoReady?<ChannelHeaderCard channelInfo={this.state.channelInfo}/>:null}
+                                </Col>
+                            </Row>
                         </Col>
                     </Row>
                 </Content>

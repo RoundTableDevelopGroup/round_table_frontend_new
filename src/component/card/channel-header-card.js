@@ -6,8 +6,6 @@ export class ChannelHeaderCard extends React.Component {
         return (
             <Row style={{
                 backgroundColor: 'white',
-                boxShadow: '0 0 10px #cccccc',
-                marginTop: '20px',
                 padding: '20px 40px'
             }}>
                 <Col span={5}>
