@@ -38,19 +38,38 @@ export class ChannelPerPage extends React.Component {
             })
     }
 
+    componentWillReceiveProps(nextProps) {
+        // 发送请求获取频道信息
+        request
+            .post('/request/channel/get_channel_info_by_id', {
+                'id': nextProps.match.params.channelId
+            })
+            .then((response) => {
+                if (response.data.success) {
+                    this.setState({
+                        channelInfoReady: true,
+                        channelInfo: {
+                            'name': response.data.name,
+                            'hot': response.data.hot,
+                            'picture': response.data.picture,
+                            'description': response.data.description,
+                            'type': response.data.type
+                        }
+                    })
+                }
+            })
+    }
+
     render() {
         return (
             <Layout>
-                <Nav/>
-                <Content style={{
+                <Nav history={this.props.history}/>
+                <Content className={'fixed-width'} style={{
                     paddingTop: '64px',
                     backgroundColor: '#f6f6f5'
                 }}>
                     <Row>
-                        <Col xs={{span: 0, offset: 0}}
-                             sm={{span: 0, offset: 0}}
-                             md={{span: 0, offset: 0}}
-                             lg={{span: 12, offset: 3}}>
+                        <Col span={18} offset={3}>
                             {this.state.channelInfoReady?<ChannelHeaderCard channelInfo={this.state.channelInfo}/>:null}
                         </Col>
                     </Row>
