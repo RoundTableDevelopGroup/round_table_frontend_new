@@ -3,6 +3,7 @@ import { Layout, Row, Col } from 'antd';
 import { Nav } from '../../component/nav';
 import { ChannelHeaderCard } from "../../component/card/channel-header-card";
 import request from 'axios';
+import { IndexCardList } from "../../component/card/index-card-list";
 
 const { Content } = Layout;
 
@@ -72,10 +73,10 @@ export class ChannelPerPage extends React.Component {
                     <Row>
                         <Col span={24} style={{
                             backgroundColor: 'white',
-                            boxShadow: '0 0 10px #aaaaaa'
+                            boxShadow: '0 0 10px #dddddd'
                         }}>
                             <Row className={'fixed-width'}>
-                                <Col span={18} offset={3}>
+                                <Col span={20} offset={2}>
                                     {this.state.channelInfoReady?
                                         <ChannelHeaderCard
                                             channelInfo={this.state.channelInfo}
@@ -85,6 +86,11 @@ export class ChannelPerPage extends React.Component {
                                     }
                                 </Col>
                             </Row>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col span={12} offset={3}>
+                            <IndexCardList/>
                         </Col>
                     </Row>
                 </Content>

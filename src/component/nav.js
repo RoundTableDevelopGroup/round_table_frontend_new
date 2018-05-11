@@ -1,7 +1,8 @@
 import React from 'react';
 import { Layout, message, Row, Col, Menu, Input, Dropdown, Avatar, Button } from 'antd';
 import request from 'axios';
-import logo2 from '../img/logo/logo2.png';
+import logo2 from '../img/logo/logo2.png'
+import { Link } from 'react-router-dom';
 
 const { Header } = Layout;
 
@@ -64,7 +65,11 @@ export class Nav extends React.Component {
                 {this.state.linkLoadDone&&this.state.userLoadDone?
                     <Row className={'fixed-width'}>
                         <Col span={3} offset={3}>
-                            <span>
+                            <Link to={'/'} style={{
+                                color: 'grey',
+                                textDecoration: 'none'
+                            }}>
+                                <span>
                                 <img alt={'logo'} src={logo2} width={'40px'} style={{
                                     paddingBottom: '18px'
                                 }}/>
@@ -73,6 +78,7 @@ export class Nav extends React.Component {
                                     fontFamily: '幼圆'
                                 }}>圆桌</span>
                             </span>
+                            </Link>
                         </Col>
                         <Col span={5} offset={1}>
                             <Menu mode={'horizontal'}

@@ -108,7 +108,9 @@ export class ChannelHeaderCard extends React.Component {
                         }}>{this.props.channelInfo.description}</p>
                     </Col>
                     <Col span={4} offset={1}>
-                        <Row>
+                        <Row style={{
+                            marginTop: '10px'
+                        }}>
                             {this.state.attentionNumLoadDown?
                                 (<Col span={10}>
                                     <div style={{
@@ -157,9 +159,10 @@ export class ChannelHeaderCard extends React.Component {
                                                 })
                                                 .then((response) => {
                                                     if (response.data.success) {
-                                                        this.setState({
-                                                            attentionButtonActive: false
-                                                        });
+                                                        this.setState(preState => ({
+                                                            attentionButtonActive: false,
+                                                            attentionNum: preState.attentionNum
+                                                        }));
                                                     }
                                                 })
                                         }}>取消关注</Button>
@@ -173,9 +176,10 @@ export class ChannelHeaderCard extends React.Component {
                                                 })
                                                 .then((response) => {
                                                     if (response.data.success) {
-                                                        this.setState({
+                                                        this.setState(preState => ({
                                                             attentionButtonActive: true,
-                                                        });
+                                                            attentionNum: preState.attentionNum
+                                                        }));
                                                     }
                                                 })
                                         }}>关注</Button>):
