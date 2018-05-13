@@ -13,6 +13,7 @@ export class ChannelHeaderCard extends React.Component {
 
             attentionNumLoadDown: false,
             attentionNum: 0,
+            attentionAccurate: null,
 
             hotDegreeLoadDown: false,
             hotDegree: 0
@@ -64,7 +65,8 @@ export class ChannelHeaderCard extends React.Component {
                 if (response.data.success) {
                     this.setState({
                         attentionNumLoadDown: true,
-                        attentionNum: response.data.num
+                        attentionNum: response.data.num,
+                        attentionAccurate: response.data.accurate
                     });
                 }
             });
@@ -161,7 +163,9 @@ export class ChannelHeaderCard extends React.Component {
                                                     if (response.data.success) {
                                                         this.setState(preState => ({
                                                             attentionButtonActive: false,
-                                                            attentionNum: preState.attentionNum
+                                                            attentionNum: this.state.attentionAccurate?
+                                                                (parseInt(preState.attentionNum) - 1).toString():
+                                                                preState.attentionNum
                                                         }));
                                                     }
                                                 })
@@ -178,7 +182,9 @@ export class ChannelHeaderCard extends React.Component {
                                                     if (response.data.success) {
                                                         this.setState(preState => ({
                                                             attentionButtonActive: true,
-                                                            attentionNum: preState.attentionNum
+                                                            attentionNum: this.state.attentionAccurate?
+                                                                (parseInt(preState.attentionNum) + 1).toString():
+                                                                preState.attentionNum
                                                         }));
                                                     }
                                                 })
