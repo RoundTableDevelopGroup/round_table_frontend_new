@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { MainRouter } from "./old/router";
+import { MainRouter } from "./router";
 
 // 引入 css
 import './style';
