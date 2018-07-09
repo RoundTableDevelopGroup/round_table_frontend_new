@@ -1,3 +1,13 @@
-.main-bg-color {
+/* 背景颜色 */
+.bg-color-main {
     background-color: #f6f6f6;
+}
+
+.bg-color-white {
+    background-color: white;
+}
+
+/* 阴影 */
+.box-shadow-c {
+    box-shadow: 0 0 10px #cccccc;
 }

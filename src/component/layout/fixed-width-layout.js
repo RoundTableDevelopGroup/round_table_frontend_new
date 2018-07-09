@@ -3,6 +3,7 @@ import { MainColorLayout } from "./main-color-layout";
 
 /**
  * FixedWidthLayout - 固定宽度布局
+ * @props className - css 类
  */
 export class FixedWidthLayout extends React.Component {
 

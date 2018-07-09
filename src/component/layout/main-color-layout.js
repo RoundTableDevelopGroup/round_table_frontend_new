@@ -1,13 +1,17 @@
 import React from 'react';
 import { Layout } from 'antd';
 
+/**
+ * MainColorLayout - 具有主背景颜色的 Layout
+ * @props className - css 类
+ */
 export class MainColorLayout extends React.Component {
 
     /**
      * 默认类名
      * @type {string}
      */
-    static defaultClassName = 'main-bg-color';
+    static defaultClassName = 'bg-color-main';
 
     /**
      * 构造

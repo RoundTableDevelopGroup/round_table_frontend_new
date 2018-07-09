@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout } from 'antd';
 import { FixedWidthLayout } from "../component/layout/fixed-width-layout";
 import { MainColorLayout } from "../component/layout/main-color-layout";
+import { MainNav } from "../component/nav/main-nav";
 
 export class IndexPage extends React.Component {
 
@@ -23,7 +24,10 @@ export class IndexPage extends React.Component {
 
         return (
             <MainColorLayout>
+                <MainNav/>
+                <FixedWidthLayout>
 
+                </FixedWidthLayout>
             </MainColorLayout>
         );
 
