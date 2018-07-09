@@ -11,3 +11,8 @@
 .box-shadow-c {
     box-shadow: 0 0 10px #cccccc;
 }
+
+/* 前景颜色 */
+.color-grey {
+    color: grey;
+}

@@ -70,14 +70,14 @@ export class Nav extends React.Component {
                                 textDecoration: 'none'
                             }}>
                                 <span>
-                                <img alt={'logo'} src={logo2} width={'40px'} style={{
-                                    paddingBottom: '18px'
-                                }}/>
-                                <span style={{
-                                    fontSize: '30px',
-                                    fontFamily: '幼圆'
-                                }}>圆桌</span>
-                            </span>
+                                    <img alt={'logo'} src={logo2} width={'40px'} style={{
+                                        paddingBottom: '18px'
+                                    }}/>
+                                    <span style={{
+                                        fontSize: '30px',
+                                        fontFamily: '幼圆'
+                                    }}>圆桌</span>
+                                </span>
                             </Link>
                         </Col>
                         <Col span={5} offset={1}>

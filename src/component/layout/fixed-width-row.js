@@ -28,7 +28,8 @@ export class FixedWidthRow extends React.Component {
     render() {
 
         return (
-            <Row className={this.className}>
+            <Row
+                className={this.className}>
                 {this.props.children}
             </Row>
         );
