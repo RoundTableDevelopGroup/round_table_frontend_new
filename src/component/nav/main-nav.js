@@ -223,7 +223,7 @@ export class MainNav extends React.Component {
 
         return (
             <Header
-                className={'z-index-2 bg-color-white box-shadow-c position-fixed w-100'}>
+                className={'z-index-2 bg-color-white box-shadow-d position-fixed w-100'}>
                 {mainRow}
             </Header>
         );

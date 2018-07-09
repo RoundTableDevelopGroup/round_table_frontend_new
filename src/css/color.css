@@ -7,12 +7,28 @@
     background-color: white;
 }
 
+/* 前景颜色 */
+.color-grey {
+    color: grey;
+}
+
 /* 阴影 */
+.box-shadow-a {
+    box-shadow: 0 0 10px #aaaaaa;
+}
+
+.box-shadow-b {
+    box-shadow: 0 0 10px #bbbbbb;
+}
+
 .box-shadow-c {
     box-shadow: 0 0 10px #cccccc;
 }
 
-/* 前景颜色 */
-.color-grey {
-    color: grey;
+.box-shadow-d {
+    box-shadow: 0 0 10px #dddddd;
+}
+
+.box-shadow-e {
+    box-shadow: 0 0 10px #eeeeee;
 }
