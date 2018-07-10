@@ -10,8 +10,12 @@
     font-size: 15px;
 }
 
-.font-size-15px {
+.font-size-18px {
     font-size: 15px;
+}
+
+.font-size-20px {
+    font-size: 20px;
 }
 
 .font-size-24px {
@@ -20,4 +24,9 @@
 
 .font-size-30px {
     font-size: 30px;
+}
+
+/* 对齐 */
+.text-align-center {
+    text-align: center;
 }

@@ -3,7 +3,8 @@ import { Row, Col } from 'antd';
 import { MainColorLayout } from "../component/layout/main-color-layout";
 import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
-import {CardList} from "../component/card/card-list";
+import { CardList } from "../component/card/card-list";
+import { ToolBLock } from "../component/block/tool-block";
 
 export class IndexPage extends React.Component {
 
@@ -31,6 +32,7 @@ export class IndexPage extends React.Component {
         let col1 = (
             <Col
                 span={16}>
+                <ToolBLock/>
                 <CardList/>
             </Col>
         );

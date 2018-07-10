@@ -2,13 +2,13 @@ import React from 'react';
 import { Row, Col } from 'antd';
 
 /**
- * RdCard - 圆桌卡片基类
+ * RdBlock - 圆桌块 组件
  * @props className - css 类
  */
-export class RdCard extends React.Component {
+export class RdBlock extends React.Component {
 
     // 默认 css 类
-    static defaultClassName = 'mb-10px p-16px-20px box-shadow-little bg-color-white';
+    static defaultClassName = 'mb-10px p-10px  box-shadow-little bg-color-white';
 
     /**
      * 构造
@@ -19,8 +19,8 @@ export class RdCard extends React.Component {
         super(props);
 
         this.className = this.props.className ?
-            `${RdCard.defaultClassName} ${this.props.className}` :
-            RdCard.defaultClassName;
+            `${RdBlock.defaultClassName} ${this.props.className}` :
+            RdBlock.defaultClassName;
 
     }
 

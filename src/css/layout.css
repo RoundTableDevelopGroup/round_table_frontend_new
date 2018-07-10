@@ -43,6 +43,18 @@
     padding: 16px 20px;
 }
 
+.p-5px {
+    padding: 5px;
+}
+
+.p-10px {
+    padding: 10px;
+}
+
+.p-20px {
+    padding: 20px;
+}
+
 .pb-18px {
     padding-bottom: 18px;
 }
@@ -133,4 +145,8 @@
 
 .line-height-52px {
     line-height: 52px;
+}
+
+.line-height-10px {
+    line-height: 10px;
 }
