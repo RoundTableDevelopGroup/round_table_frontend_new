@@ -36,10 +36,13 @@ export class IndexPage extends React.Component {
                 <PostCard
                     title={'测试标题'}
                     time={'2小时前'}
+                    channelLink={'#'}
+                    link={'#'}
                     channel={'绝地求生'}
                     summary={summary}
                     userInfo={{
-                        username: '可见影子'
+                        username: '可见影子',
+                        address: '#'
                     }}
                     liked={true}
                     likeNum={250}/>

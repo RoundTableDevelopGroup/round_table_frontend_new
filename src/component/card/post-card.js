@@ -5,6 +5,7 @@ import { Icon, Row, Avatar, Button } from 'antd';
 
 /**
  * PostCard - 文章卡片
+ * @props link - 文章链接
  * @props id - 文章 id
  * @props title - 标题
  * @props time - 时间
@@ -75,49 +76,76 @@ export class PostCard extends React.Component {
 
         // 行
         let line1 = (
-            <div className={'color-plain'}>
-                来自频道 {this.props.channel}
+            <div className={'color-plain font-size-15px'}>
+                来自频道
+                <Link
+                    className={'color-plain'}
+                    to={this.props.channelLink}>
+                    &nbsp;{this.props.channel}
+                </Link>
             </div>
         );
         let line2 = (
-            <h2>{this.props.title}</h2>
+            <h2>
+                <Link
+                    className={'color-black text-decoration-none font-size-24px'}
+                    to={this.props.link}>
+                    {this.props.title}
+                </Link>
+            </h2>
         );
         // TODO 为阅读全文按钮添加响应
         let line3 = (
             <div>
-                {this.props.summary}
-                <Link to={'#'}>
+                <span className={'color-text'}>
+                    {this.props.summary}&nbsp;......&nbsp;
+                </span>
+                <Link
+                    to={'#'}
+                    className={'color-text'}>
                     阅读全文<Icon type={'down'}/>
                 </Link>
             </div>
         );
         // TODO 把用户头像换成真正的头像
         let line4 = (
-            <Row type={'flex'} align={'middle'}>
-                <Avatar icon={'user'} size={'small'}/>
-                <span className={'font-size-15px'}>
-                    <strong>{this.props.userInfo.username}</strong>
-                </span>
-                <span className={'color-grey font-size-15px'}>
+            <Row
+                type={'flex'}
+                align={'middle'}
+                className={'mt-8px'}>
+                <Link
+                    to={this.props.userInfo.address}
+                    className={'color-plain'}>
+                    <Avatar icon={'user'} size={'small'}/>
+                    &nbsp;
+                    <span className={'font-size-15px'}>
+                        <strong>{this.props.userInfo.username}</strong>
+                    </span>
+                </Link>
+                &nbsp;
+                <span className={'color-plain font-size-15px'}>
                     {this.props.time}
                 </span>
             </Row>
         );
         let line5 = (
-            <div>
+            <div className={'mt-8px'}>
                 <Button
                     onClick={this.onLikeButtonClick}
-                    icon={'heart-0'}>
+                    icon={'heart-0'}
+                    className={'color-plain'}>
                     {this.state.likeNum}喜欢
                 </Button>
                 <Button
                     onClick={this.onCommentButtonClick}
-                    icon={'edit'}>
+                    icon={'edit'}
+                    className={'ml-8px color-plain'}>
                     评论
                 </Button>
                 <Button
                     onClick={this.onShareButtonClick}
-                    icon={'share-alt'}>
+                    icon={'share-alt'}
+                    className={'ml-8px color-plain'}>
                     分享
                 </Button>
             </div>

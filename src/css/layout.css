@@ -3,6 +3,14 @@
     margin: 0 auto;
 }
 
+.ml-8px {
+    margin-left: 8px;
+}
+
+.mt-8px {
+    margin-top: 8px;
+}
+
 .mt-15px {
     margin-top: 15px;
 }
@@ -29,6 +37,14 @@
 
 .pb-18px {
     padding-bottom: 18px;
+}
+
+.pl-8px {
+     padding-left: 8px;
+ }
+
+.pt-8px {
+    padding-top: 8px;
 }
 
 .pt-80px {

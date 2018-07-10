@@ -28,6 +28,14 @@
     color: #40a9ff;
 }
 
+.color-black {
+    color: black;
+}
+
+.color-text {
+    color: #646464;
+}
+
 /* 阴影 */
 .box-shadow-little {
     box-shadow: 0 1px 3px rgba(26,26,26,.1);
