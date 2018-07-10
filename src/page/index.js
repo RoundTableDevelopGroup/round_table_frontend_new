@@ -1,7 +1,9 @@
 import React from 'react';
+import { Row, Col } from 'antd';
 import { MainColorLayout } from "../component/layout/main-color-layout";
 import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
+import {PostCard} from "../component/card/post-card";
 
 export class IndexPage extends React.Component {
 
@@ -25,11 +27,39 @@ export class IndexPage extends React.Component {
      */
     render() {
 
+        let summary = '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落';
+
+        // 列
+        let col1 = (
+            <Col
+                span={18}>
+                <PostCard
+                    title={'测试标题'}
+                    time={'2小时前'}
+                    channel={'绝地求生'}
+                    summary={summary}
+                    userInfo={{
+                        username: '可见影子'
+                    }}
+                    liked={true}
+                    likeNum={250}/>
+            </Col>
+        );
+        let col2 = (
+            <Col
+                span={6}>
+
+            </Col>
+        );
+
         return (
             <MainColorLayout>
                 <MainNav/>
                 <LeaveBlankLayout>
-
+                    <Row>
+                        {col1}
+                        {col2}
+                    </Row>
                 </LeaveBlankLayout>
             </MainColorLayout>
         );
