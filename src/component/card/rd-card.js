@@ -1,27 +1,26 @@
 import React from 'react';
-import { Row } from 'antd';
+import { Row, Col } from 'antd';
 
 /**
- * FixedWidthRow - 固定宽度的 Row 类
+ * RdCard - 圆桌卡片基类
  * @props className - css 类
  */
-export class FixedWidthRow extends React.Component {
+export class RdCard extends React.Component {
 
     // 默认 css 类
-    static defaultClassName = 'w-1100px m-0-auto';
+    static defaultClassName = 'mb-10px p-16px-20px box-shadow-little';
 
     /**
      * 构造
-     * @param props
+     * @param props - 组件属性
      */
     constructor(props) {
 
         super(props);
 
-        // 计算 css 类名
         this.className = this.props.className ?
-            `${FixedWidthRow.defaultClassName} ${this.props.className}` :
-            FixedWidthRow.defaultClassName;
+            `${RdCard.defaultClassName} ${this.props.className}` :
+            RdCard.defaultClassName;
 
     }
 
@@ -30,14 +29,14 @@ export class FixedWidthRow extends React.Component {
      * @returns {*}
      */
     render() {
-
         return (
             <Row
                 className={this.className}>
-                {this.props.children}
+                <Col>
+
+                </Col>
             </Row>
         );
-
     }
 
 }

@@ -7,8 +7,20 @@
     margin-top: 15px;
 }
 
+.mt-74px {
+    margin-top: 74px;
+}
+
 .mt-80px {
     margin-top: 80px;
+}
+
+.mb-10px {
+    margin-bottom: 10px;
+}
+
+.p-16px-20px {
+    padding: 16px 20px;
 }
 
 .pb-18px {
@@ -30,6 +42,10 @@
 
 .w-900px {
     width: 900px;
+}
+
+.w-1100px {
+    width: 1100px;
 }
 
 .w-1440px {

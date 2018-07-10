@@ -153,7 +153,7 @@ export class MainNav extends React.Component {
         // cols
         let col1 = (
             <Col
-                span={2} offset={3}>
+                span={3} offset={3}>
                 <Link
                     to={'/'}
                     className={'color-grey text-decoration-none'}>
@@ -172,7 +172,7 @@ export class MainNav extends React.Component {
         );
         let col2 = (
             <Col
-                span={3} offset={1}>
+                span={4} offset={1}>
                 <Menu
                     mode={'horizontal'}
                     className={'line-height-63px'}
@@ -195,7 +195,7 @@ export class MainNav extends React.Component {
         );
         let col3 = (
             <Col
-                span={7} offset={2}>
+                span={6} offset={1}>
                 <Search
                     placeholder={'发现'}
                     onSearch={this.onSearch}/>

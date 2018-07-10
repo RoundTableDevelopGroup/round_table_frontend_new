@@ -7,6 +7,10 @@
     background-color: white;
 }
 
+.bg-color-yellow {
+    background-color: yellow;
+}
+
 /* 前景颜色 */
 .color-grey {
     color: grey;
