@@ -13,22 +13,7 @@
 }
 
 /* 阴影 */
-.box-shadow-a {
-    box-shadow: 0 0 10px #aaaaaa;
+.box-shadow-little {
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
 }
 
-.box-shadow-b {
-    box-shadow: 0 0 10px #bbbbbb;
-}
-
-.box-shadow-c {
-    box-shadow: 0 0 10px #cccccc;
-}
-
-.box-shadow-d {
-    box-shadow: 0 0 10px #dddddd;
-}
-
-.box-shadow-e {
-    box-shadow: 0 0 10px #eeeeee;
-}
