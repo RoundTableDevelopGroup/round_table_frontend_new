@@ -1,6 +1,6 @@
 import React from 'react';
 import { RdBlock } from "./rd-block";
-import { Row, Col, Icon } from 'antd';
+import { Row, Col } from 'antd';
 import { IconWithText } from "../interactive/icon-with-text";
 
 export class ToolBLock extends React.Component {
