@@ -13,6 +13,10 @@ export class IndexPage extends React.Component {
 
         super(props);
 
+        this.state = {
+
+        };
+
     }
 
     /**
