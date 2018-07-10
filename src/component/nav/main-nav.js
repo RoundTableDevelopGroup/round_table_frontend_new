@@ -179,7 +179,7 @@ export class MainNav extends React.Component {
                 span={4} offset={1}>
                 <Menu
                     mode={'horizontal'}
-                    className={'line-height-51px color-plain font-size-15px'}
+                    className={'line-height-50px color-plain font-size-15px'}
                     onClick={this.onMenuItemClick}>
                     <SubMenu
                         title={'游戏频道'}>
