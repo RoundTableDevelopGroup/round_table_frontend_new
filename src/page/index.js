@@ -1,8 +1,7 @@
 import React from 'react';
-import { Layout } from 'antd';
-import { FixedWidthLayout } from "../component/layout/fixed-width-layout";
 import { MainColorLayout } from "../component/layout/main-color-layout";
 import { MainNav } from "../component/nav/main-nav";
+import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
 
 export class IndexPage extends React.Component {
 
@@ -25,9 +24,9 @@ export class IndexPage extends React.Component {
         return (
             <MainColorLayout>
                 <MainNav/>
-                <FixedWidthLayout>
+                <LeaveBlankLayout>
 
-                </FixedWidthLayout>
+                </LeaveBlankLayout>
             </MainColorLayout>
         );
 
