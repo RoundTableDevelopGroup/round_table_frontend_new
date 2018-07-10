@@ -88,6 +88,20 @@ export class CardList extends React.Component {
                 },
                 liked: true,
                 linkNum: 250
+            }, {
+                type: 'post',
+                title: '测试标题',
+                time: '2小时前',
+                channelLink: '#',
+                link: '#',
+                channel: '绝地求生',
+                summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                userInfo: {
+                    username: '可见影子',
+                    address: '#'
+                },
+                liked: true,
+                linkNum: 250
             }]
         });
 
@@ -111,7 +125,7 @@ export class CardList extends React.Component {
 
         // 加载更多按钮
         let loadMoreButton = (
-            <div>
+            <div className={'mb-20px'}>
                 <Button
                     className={'w-100 border-none box-shadow-little'}
                     onClick={this.loadMoreButtonClick}>
