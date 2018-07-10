@@ -153,7 +153,7 @@ export class MainNav extends React.Component {
         // cols
         let col1 = (
             <Col
-                span={3} offset={3}>
+                span={3} offset={1}>
                 <Link
                     to={'/'}
                     className={'color-grey text-decoration-none'}>
@@ -195,7 +195,7 @@ export class MainNav extends React.Component {
         );
         let col3 = (
             <Col
-                span={6} offset={1}>
+                span={8} offset={1}>
                 <Search
                     placeholder={'发现'}
                     onSearch={this.onSearch}/>
