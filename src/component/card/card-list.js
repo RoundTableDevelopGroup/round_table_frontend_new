@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col, Button } from 'antd';
-import {PostCard} from "./post-card";
+import { PostCard } from "./post-card";
+import { LoadingCard } from "./loading-card";
 
 /**
  * CardList - 卡片列表
@@ -19,7 +20,9 @@ export class CardList extends React.Component {
 
         this.state = {
             // 卡片
-            cards: []
+            cards: [],
+            // 是否在加载中
+            loading: false
         };
 
     }
@@ -114,6 +117,35 @@ export class CardList extends React.Component {
     loadMoreButtonClick = (e) => {
 
         // TODO 增量读取数据
+        this.setState({
+            loading: true
+        });
+        setTimeout(() => {
+            this.setState((pre) => {
+                let cards = [];
+                for (let i = 0; i < pre.cards.length; i++)
+                    cards.push(pre.cards[i]);
+                cards.push({
+                    type: 'post',
+                    title: '测试标题222',
+                    time: '2小时前',
+                    channelLink: '#',
+                    link: '#',
+                    channel: '绝地求生',
+                    summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                    userInfo: {
+                        username: '可见影子',
+                        address: '#'
+                    },
+                    liked: true,
+                    linkNum: 250
+                });
+                return {
+                    cards: cards,
+                    loading: false
+                };
+            });
+        }, 2000);
 
     };
 
@@ -159,6 +191,9 @@ export class CardList extends React.Component {
                                 return null;
                         }
                     })}
+                    {this.state.loading ?
+                        (<LoadingCard/>) : null
+                    }
                     {loadMoreButton}
                 </Col>
             </Row>
