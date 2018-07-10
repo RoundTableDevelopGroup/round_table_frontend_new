@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainColorLayout } from "./main-color-layout";
+import { TransparentLayout } from "./transparent-layout";
 
 /**
  * FixedWidthLayout - 固定宽度布局
@@ -36,11 +36,11 @@ export class FixedWidthLayout extends React.Component {
     render() {
 
         return (
-            <MainColorLayout
+            <TransparentLayout
                 className={this.className}
                 style={this.props.style}>
                 {this.props.children}
-            </MainColorLayout>
+            </TransparentLayout>
         );
 
     }

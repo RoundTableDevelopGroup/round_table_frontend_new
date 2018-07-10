@@ -2,17 +2,17 @@ import React from 'react';
 import { Layout } from 'antd';
 
 /**
- * MainColorLayout - 具有主背景颜色的 Layout
+ * TransparentLayout - 透明 Layout
  * @props className - css 类
  * @props style - 样式
  */
-export class MainColorLayout extends React.Component {
+export class TransparentLayout extends React.Component {
 
     /**
      * 默认类名
      * @type {string}
      */
-    static defaultClassName = 'bg-color-main';
+    static defaultClassName = 'bg-transparent';
 
     /**
      * 构造
@@ -23,8 +23,8 @@ export class MainColorLayout extends React.Component {
         super(props);
 
         this.className = this.props.className ?
-            `${MainColorLayout.defaultClassName} ${this.props.className}` :
-            MainColorLayout.defaultClassName
+            `${TransparentLayout.defaultClassName} ${this.props.className}` :
+            TransparentLayout.defaultClassName
 
     }
 

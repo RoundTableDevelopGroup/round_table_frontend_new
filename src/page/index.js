@@ -1,10 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'antd';
-import { MainColorLayout } from "../component/layout/main-color-layout";
+import { TransparentLayout } from "../component/layout/transparent-layout";
 import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
 import { CardList } from "../component/card/card-list";
 import { ToolBLock } from "../component/block/tool-block";
+import img from '../img/timg.jpeg';
 
 export class IndexPage extends React.Component {
 
@@ -45,7 +46,7 @@ export class IndexPage extends React.Component {
         );
 
         return (
-            <MainColorLayout>
+            <TransparentLayout>
                 <MainNav/>
                 <LeaveBlankLayout>
                     <Row>
@@ -53,7 +54,7 @@ export class IndexPage extends React.Component {
                         {col2}
                     </Row>
                 </LeaveBlankLayout>
-            </MainColorLayout>
+            </TransparentLayout>
         );
 
     }
