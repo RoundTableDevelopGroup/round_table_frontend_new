@@ -161,7 +161,7 @@ export class MainNav extends React.Component {
                         <img
                             alt={'logo'}
                             src={logo}
-                            className={'w-40px pb-18px'}/>
+                            className={'w-50px position-relative top-n10px'}/>
                         <span
                             className={'font-size-30px'}>
                             圆桌
@@ -175,7 +175,7 @@ export class MainNav extends React.Component {
                 span={4} offset={1}>
                 <Menu
                     mode={'horizontal'}
-                    className={'line-height-63px'}
+                    className={'line-height-51px'}
                     onClick={this.onMenuItemClick}>
                     <SubMenu
                         title={'游戏频道'}>
@@ -223,7 +223,7 @@ export class MainNav extends React.Component {
 
         return (
             <Header
-                className={'z-index-2 bg-color-white box-shadow-little position-fixed w-100'}>
+                className={'w-100 h-52px line-height-52px z-index-2 bg-color-white box-shadow-little position-fixed'}>
                 {mainRow}
             </Header>
         );

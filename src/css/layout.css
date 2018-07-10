@@ -56,9 +56,21 @@
     width: 40px;
 }
 
+.w-50px {
+    width: 50px;
+}
+
+.w-52px {
+    width: 52px;
+}
+
 /* 高度类 */
 .h-100 {
     height: 100%;
+}
+
+.h-52px {
+    height: 52px;
 }
 
 /* position */
@@ -66,7 +78,23 @@
     position: fixed;
 }
 
+.position-relative {
+    position: relative;
+}
+
+.top-n10px {
+    top: -10px;
+}
+
 /* 行高 */
 .line-height-63px {
     line-height: 63px;
+}
+
+.line-height-51px {
+    line-height: 51px;
+}
+
+.line-height-52px {
+    line-height: 52px;
 }
