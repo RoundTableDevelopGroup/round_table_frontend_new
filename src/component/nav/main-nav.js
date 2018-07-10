@@ -215,7 +215,7 @@ export class MainNav extends React.Component {
         );
         let col4 = (
             <Col
-                span={3} offset={0}
+                span={1} offset={2}
                 align={'right'}>
                 {this.state.userInfo.login ?
                     userAvatar : joinRoundTaleButton

@@ -27,8 +27,6 @@ export class IndexPage extends React.Component {
      */
     render() {
 
-        let summary = '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落';
-
         // 列
         let col1 = (
             <Col
