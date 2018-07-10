@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 /**
  * MainColorLayout - 具有主背景颜色的 Layout
  * @props className - css 类
+ * @props style - 样式
  */
 export class MainColorLayout extends React.Component {
 
@@ -34,7 +35,8 @@ export class MainColorLayout extends React.Component {
     render() {
         return (
             <Layout
-                className={this.className}>
+                className={this.className}
+                style={this.props.style}>
                 {this.props.children}
             </Layout>
         );

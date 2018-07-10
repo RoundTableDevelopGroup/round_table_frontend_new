@@ -4,6 +4,7 @@ import { Row, Col } from 'antd';
 /**
  * RdBlock - 圆桌块 组件
  * @props className - css 类
+ * @props style - 样式
  */
 export class RdBlock extends React.Component {
 
@@ -32,7 +33,8 @@ export class RdBlock extends React.Component {
 
         return (
             <Row
-                className={this.className}>
+                className={this.className}
+                style={this.props.style}>
                 <Col>
                     {this.props.children}
                 </Col>

@@ -4,6 +4,7 @@ import { MainColorLayout } from "./main-color-layout";
 /**
  * FixedWidthLayout - 固定宽度布局
  * @props className - css 类
+ * @props style - 样式
  */
 export class FixedWidthLayout extends React.Component {
 
@@ -36,7 +37,8 @@ export class FixedWidthLayout extends React.Component {
 
         return (
             <MainColorLayout
-                className={this.className}>
+                className={this.className}
+                style={this.props.style}>
                 {this.props.children}
             </MainColorLayout>
         );

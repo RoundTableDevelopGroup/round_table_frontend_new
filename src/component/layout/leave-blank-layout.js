@@ -4,6 +4,7 @@ import { FixedWidthLayout } from "./fixed-width-layout";
 /**
  * LeaveBlankLayout - 顶部留 80px 空白的 Layout 组件
  * @props className - css 类
+ * @props style - 样式
  */
 export class LeaveBlankLayout extends React.Component {
 
@@ -32,7 +33,9 @@ export class LeaveBlankLayout extends React.Component {
     render() {
 
         return (
-            <FixedWidthLayout className={LeaveBlankLayout.defaultClassName}>
+            <FixedWidthLayout
+                className={LeaveBlankLayout.defaultClassName}
+                style={this.props.style}>
                 {this.props.children}
             </FixedWidthLayout>
         );

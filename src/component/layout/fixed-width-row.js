@@ -4,6 +4,7 @@ import { Row } from 'antd';
 /**
  * FixedWidthRow - 固定宽度的 Row 类
  * @props className - css 类
+ * @props style - 样式
  */
 export class FixedWidthRow extends React.Component {
 
@@ -33,7 +34,8 @@ export class FixedWidthRow extends React.Component {
 
         return (
             <Row
-                className={this.className}>
+                className={this.className}
+                style={this.props.style}>
                 {this.props.children}
             </Row>
         );

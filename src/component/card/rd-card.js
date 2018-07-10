@@ -4,6 +4,7 @@ import { Row, Col } from 'antd';
 /**
  * RdCard - 圆桌卡片基类
  * @props className - css 类
+ * @props style - 样式
  */
 export class RdCard extends React.Component {
 
@@ -32,7 +33,8 @@ export class RdCard extends React.Component {
 
         return (
             <Row
-                className={this.className}>
+                className={this.className}
+                style={this.props.style}>
                 <Col>
                     {this.props.children}
                 </Col>
