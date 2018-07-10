@@ -1,6 +1,10 @@
 import React from 'react';
 import { FixedWidthLayout } from "./fixed-width-layout";
 
+/**
+ * LeaveBlankLayout - 顶部留 80px 空白的 Layout 组件
+ * @props className - css 类
+ */
 export class LeaveBlankLayout extends React.Component {
 
     // 默认类名

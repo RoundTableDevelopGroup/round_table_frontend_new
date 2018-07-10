@@ -1,6 +1,10 @@
 import React from 'react';
 import { Row } from 'antd';
 
+/**
+ * FixedWidthRow - 固定宽度的 Row 类
+ * @props className - css 类
+ */
 export class FixedWidthRow extends React.Component {
 
     // 默认 css 类
