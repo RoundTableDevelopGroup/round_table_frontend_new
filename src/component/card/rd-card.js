@@ -8,7 +8,7 @@ import { Row, Col } from 'antd';
 export class RdCard extends React.Component {
 
     // 默认 css 类
-    static defaultClassName = 'mb-10px p-16px-20px box-shadow-little';
+    static defaultClassName = 'mb-10px p-16px-20px box-shadow-little bg-color-white';
 
     /**
      * 构造
@@ -33,7 +33,7 @@ export class RdCard extends React.Component {
             <Row
                 className={this.className}>
                 <Col>
-
+                    {this.props.children}
                 </Col>
             </Row>
         );
