@@ -8,7 +8,7 @@ import { FixedWidthLayout } from "./fixed-width-layout";
 export class LeaveBlankLayout extends React.Component {
 
     // 默认类名
-    static defaultClassName = 'pt-80px';
+    static defaultClassName = 'mt-80px';
 
     /**
      * 构造
