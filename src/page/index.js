@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { MainColorLayout } from "../component/layout/main-color-layout";
 import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
-import {PostCard} from "../component/card/post-card";
+import {CardList} from "../component/card/card-list";
 
 export class IndexPage extends React.Component {
 
@@ -33,19 +33,7 @@ export class IndexPage extends React.Component {
         let col1 = (
             <Col
                 span={16}>
-                <PostCard
-                    title={'测试标题'}
-                    time={'2小时前'}
-                    channelLink={'#'}
-                    link={'#'}
-                    channel={'绝地求生'}
-                    summary={summary}
-                    userInfo={{
-                        username: '可见影子',
-                        address: '#'
-                    }}
-                    liked={true}
-                    likeNum={250}/>
+                <CardList/>
             </Col>
         );
         let col2 = (

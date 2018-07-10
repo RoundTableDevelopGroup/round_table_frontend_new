@@ -10,6 +10,7 @@ import { Icon, Row, Avatar, Button } from 'antd';
  * @props title - 标题
  * @props time - 时间
  * @props channel - 频道
+ * @props channelLink - 频道链接
  * @props summary - 概述
  * @props userInfo - 用户信息
  *  username - 用户名
