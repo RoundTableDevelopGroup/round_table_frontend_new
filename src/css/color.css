@@ -20,6 +20,14 @@
     color: grey;
 }
 
+.color-plain {
+    color: #77839c;
+}
+
+.color-hover {
+    color: #40a9ff;
+}
+
 /* 阴影 */
 .box-shadow-little {
     box-shadow: 0 1px 3px rgba(26,26,26,.1);

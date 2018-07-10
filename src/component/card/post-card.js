@@ -75,12 +75,12 @@ export class PostCard extends React.Component {
 
         // 行
         let line1 = (
-            <h2>{this.props.title}</h2>
-        );
-        let line2 = (
-            <div className={'color-grey'}>
+            <div className={'color-plain'}>
                 来自频道 {this.props.channel}
             </div>
+        );
+        let line2 = (
+            <h2>{this.props.title}</h2>
         );
         // TODO 为阅读全文按钮添加响应
         let line3 = (

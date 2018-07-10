@@ -147,7 +147,11 @@ export class MainNav extends React.Component {
         );
         // 加入圆桌按钮
         let joinRoundTaleButton = (
-            <Button onClick={this.onJoinRoundTableButtonClick}>加入圆桌</Button>
+            <Button
+                className={'color-plain'}
+                onClick={this.onJoinRoundTableButtonClick}>
+                加入圆桌
+            </Button>
         );
 
         // cols
@@ -161,9 +165,9 @@ export class MainNav extends React.Component {
                         <img
                             alt={'logo'}
                             src={logo}
-                            className={'w-50px position-relative top-n10px'}/>
+                            className={'w-42px position-relative top-n7px'}/>
                         <span
-                            className={'font-size-30px'}>
+                            className={'font-size-24px color-plain'}>
                             圆桌
                         </span>
                     </span>
@@ -175,7 +179,7 @@ export class MainNav extends React.Component {
                 span={4} offset={1}>
                 <Menu
                     mode={'horizontal'}
-                    className={'line-height-51px'}
+                    className={'line-height-51px color-plain font-size-15px'}
                     onClick={this.onMenuItemClick}>
                     <SubMenu
                         title={'游戏频道'}>
@@ -183,11 +187,19 @@ export class MainNav extends React.Component {
                             title={'热门频道'}>
                             {this.state.linkInfo.map((item) => {
                                 return (
-                                    <Item key={'/channel/' + item.id}>{item.name}</Item>
+                                    <Item
+                                        className={'color-plain'}
+                                        key={'/channel/' + item.id}>
+                                        {item.name}
+                                    </Item>
                                 );
                             })}
                         </ItemGroup>
-                        <Item key={'/channel'}>查看更多</Item>
+                        <Item
+                            className={'color-plain'}
+                            key={'/channel'}>
+                            查看更多
+                        </Item>
                     </SubMenu>
                     <Item key={'/match'}>赛事</Item>
                 </Menu>

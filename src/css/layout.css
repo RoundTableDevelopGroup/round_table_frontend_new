@@ -19,6 +19,10 @@
     margin-bottom: 10px;
 }
 
+.pl-12px {
+    padding-left: 10px;
+}
+
 .p-16px-20px {
     padding: 16px 20px;
 }
@@ -60,6 +64,10 @@
     width: 40px;
 }
 
+.w-42px {
+    width: 42px;
+}
+
 .w-50px {
     width: 50px;
 }
@@ -86,8 +94,8 @@
     position: relative;
 }
 
-.top-n10px {
-    top: -10px;
+.top-n7px {
+    top: -7px;
 }
 
 /* 行高 */
