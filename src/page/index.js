@@ -32,7 +32,8 @@ export class IndexPage extends React.Component {
         // 列
         let col1 = (
             <Col
-                span={18}>
+                span={18}
+                className={'bg-color-yellow'}>
                 <PostCard
                     title={'测试标题'}
                     time={'2小时前'}
@@ -47,8 +48,9 @@ export class IndexPage extends React.Component {
         );
         let col2 = (
             <Col
-                span={6}>
-
+                span={6}
+                className={'bg-color-green'}>
+sad
             </Col>
         );
 

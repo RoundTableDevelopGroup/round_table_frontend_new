@@ -11,7 +11,7 @@ export class FixedWidthLayout extends React.Component {
      * 默认类名
      * @type {string}
      */
-    static defaultClassName = 'w-900px h-100 m-0-auto';
+    static defaultClassName = 'w-1000px h-100 m-0-auto';
 
     /**
      * 构造

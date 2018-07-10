@@ -11,6 +11,10 @@
     background-color: yellow;
 }
 
+.bg-color-green {
+    background-color: green;
+}
+
 /* 前景颜色 */
 .color-grey {
     color: grey;
