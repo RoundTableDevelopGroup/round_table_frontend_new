@@ -5,7 +5,6 @@ import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
 import { CardList } from "../component/card/card-list";
 import { ToolBLock } from "../component/block/tool-block";
-import img from '../img/timg.jpeg';
 
 export class IndexPage extends React.Component {
 
