@@ -5,6 +5,7 @@ import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
 import { CardList } from "../component/list/card-list";
 import { ToolBLock } from "../component/block/tool-block";
+import { SideList } from "../component/list/side-list";
 
 export class IndexPage extends React.Component {
 
@@ -40,6 +41,7 @@ export class IndexPage extends React.Component {
             <Col
                 span={8}
                 className={'pl-12px'}>
+                <SideList/>
             </Col>
         );
 
