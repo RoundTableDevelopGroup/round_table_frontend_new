@@ -60,7 +60,7 @@ export class IconWithText extends React.Component {
                         <div>
                             <Badge dot={this.state.dot}>
                                 <span className={'color-plain'}>
-                                    {this.props.text}
+                                    &nbsp;{this.props.text}&nbsp;
                                 </span>
                             </Badge>
                         </div>
