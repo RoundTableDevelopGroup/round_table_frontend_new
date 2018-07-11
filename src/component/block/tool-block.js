@@ -34,7 +34,7 @@ export class ToolBLock extends React.Component {
             <Col span={6}>
                 <IconWithText
                     icon={'edit'}
-                    text={'写文章'}
+                    text={'发帖'}
                     to={'#'}
                     dot={false}/>
             </Col>

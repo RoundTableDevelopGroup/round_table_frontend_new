@@ -218,7 +218,8 @@ export class CardList extends React.Component {
                     {this.state.loading ?
                         (<LoadingCard/>) : null
                     }
-                    {loadMoreButton}
+                    {this.state.loading ?
+                        null : loadMoreButton}
                 </Col>
             </Row>
         );
