@@ -1,8 +1,8 @@
 import React from 'react';
 import { Row, Col, Button } from 'antd';
-import { PostCard } from "./post-card";
-import { LoadingCard } from "./loading-card";
-import { CarouselCard } from "./carousel-card";
+import { PostCard } from "../card/post-card";
+import { LoadingCard } from "../card/loading-card";
+import { CarouselCard } from "../card/carousel-card";
 import { CarouselText } from "../interactive/carousel-text";
 
 /**

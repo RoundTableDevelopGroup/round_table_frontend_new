@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { TransparentLayout } from "../component/layout/transparent-layout";
 import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
-import { CardList } from "../component/card/card-list";
+import { CardList } from "../component/list/card-list";
 import { ToolBLock } from "../component/block/tool-block";
 
 export class IndexPage extends React.Component {
@@ -40,7 +40,6 @@ export class IndexPage extends React.Component {
             <Col
                 span={8}
                 className={'pl-12px'}>
-                
             </Col>
         );
 
