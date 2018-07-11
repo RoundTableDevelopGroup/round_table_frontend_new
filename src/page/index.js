@@ -1,11 +1,12 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Affix } from 'antd';
 import { TransparentLayout } from "../component/layout/transparent-layout";
 import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
 import { CardList } from "../component/list/card-list";
 import { ToolBLock } from "../component/block/tool-block";
 import { SideList } from "../component/list/side-list";
+import { CarouselText } from "../component/interactive/carousel-text";
 
 export class IndexPage extends React.Component {
 
@@ -41,7 +42,12 @@ export class IndexPage extends React.Component {
             <Col
                 span={8}
                 className={'pl-12px'}>
-                <SideList/>
+                <Affix offsetTop={62}>
+                    <SideList/>
+                    <CarouselText
+                        height={'200px'}
+                        title={'ad'}/>
+                </Affix>
             </Col>
         );
 
