@@ -40,7 +40,7 @@ export class IndexPage extends React.Component {
             <Col
                 span={8}
                 className={'pl-12px'}>
-
+                
             </Col>
         );
 
