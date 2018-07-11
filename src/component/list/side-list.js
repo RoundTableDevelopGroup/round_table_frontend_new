@@ -1,6 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { LoginHintBlock } from "../block/login-hint-block";
+import { CarouselText } from "../interactive/carousel-text";
+import { SmallMatchBlock } from "../block/small-match-block";
 
 /**
  * SideList
@@ -33,6 +35,29 @@ export class SideList extends React.Component {
             items: [{
                 type: 'loginHint',
                 num: '24w'
+            }, {
+                type: 'testPicture',
+                title: '重要赛事宣传图',
+                height: '200px'
+            }, {
+                type: 'smallMatch',
+                items: [{
+                    name: '南航杯炉石全职业赛',
+                    time: 'X天后',
+                    link: '#'
+                }, {
+                    name: '南航吃鸡王大赛',
+                    time: 'X天后',
+                    link: '#'
+                }, {
+                    name: '南航杯炉石全职业赛',
+                    time: 'X天后',
+                    link: '#'
+                }, {
+                    name: '南航吃鸡王大赛',
+                    time: 'X天后',
+                    link: '#'
+                }]
             }]
         });
 
@@ -54,6 +79,20 @@ export class SideList extends React.Component {
                                     <LoginHintBlock
                                         key={key}
                                         num={item.num}/>
+                                );
+                            case 'testPicture':
+                                return (
+                                    <CarouselText
+                                        key={key}
+                                        title={item.title}
+                                        height={item.height}
+                                        className={'mb-10px'}/>
+                                );
+                            case 'smallMatch':
+                                return (
+                                    <SmallMatchBlock
+                                        key={key}
+                                        items={item.items}/>
                                 );
                             default:
                                 return null;

@@ -89,7 +89,7 @@ export class PostCard extends React.Component {
         let line2 = (
             <h2>
                 <Link
-                    className={'color-black text-decoration-none font-size-24px'}
+                    className={'color-text text-decoration-none font-size-24px'}
                     to={this.props.link}>
                     {this.props.title}
                 </Link>

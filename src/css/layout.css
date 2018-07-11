@@ -7,6 +7,10 @@
     margin-left: 8px;
 }
 
+.mt-3px {
+    margin-top: 3px;
+}
+
 .mt-8px {
     margin-top: 8px;
 }
@@ -169,4 +173,17 @@
 
 .line-height-10px {
     line-height: 10px;
+}
+
+.line-height-100 {
+    line-height: 100%;
+}
+
+/* float */
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
 }
