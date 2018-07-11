@@ -4,9 +4,9 @@ import { RdCard } from "./rd-card";
 import { Icon, Row, Avatar, Button } from 'antd';
 
 /**
- * PostCard - 文章卡片
- * @props link - 文章链接
- * @props id - 文章 id
+ * PostCard - 帖子卡片
+ * @props link - 帖子链接
+ * @props id - 帖子 id
  * @props title - 标题
  * @props time - 时间
  * @props channel - 频道
@@ -50,7 +50,7 @@ export class PostCard extends React.Component {
     };
 
     /**
-     * 当评论按钮被点击时的回调
+     * 当跟帖按钮被点击时的回调
      * @param e
      */
     onCommentButtonClick = (e) => {
@@ -141,7 +141,7 @@ export class PostCard extends React.Component {
                     onClick={this.onCommentButtonClick}
                     icon={'edit'}
                     className={'ml-8px color-plain'}>
-                    评论
+                    跟帖
                 </Button>
                 <Button
                     onClick={this.onShareButtonClick}
