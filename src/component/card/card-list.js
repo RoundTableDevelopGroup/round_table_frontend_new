@@ -2,6 +2,8 @@ import React from 'react';
 import { Row, Col, Button } from 'antd';
 import { PostCard } from "./post-card";
 import { LoadingCard } from "./loading-card";
+import { CarouselCard } from "./carousel-card";
+import { CarouselText } from "../interactive/carousel-text";
 
 /**
  * CardList - 卡片列表
@@ -33,9 +35,25 @@ export class CardList extends React.Component {
     componentDidMount() {
 
         // TODO 发送请求获取卡片
+        // TODO 将 Carousel 替换成卡片
         // 先假装获取一张卡片
         this.setState({
             cards: [{
+                type: 'carousel',
+                items: [(
+                    <CarouselText
+                        title={'title 1'}/>
+                ), (
+                    <CarouselText
+                        title={'title 2'}/>
+                ), (
+                    <CarouselText
+                        title={'title 3'}/>
+                ), (
+                    <CarouselText
+                        title={'title 4'}/>
+                )]
+            }, {
                 type: 'post',
                 title: '测试标题',
                 time: '2小时前',
@@ -186,6 +204,12 @@ export class CardList extends React.Component {
                                         liked={card.liked}
                                         likeNum={card.likeNum}
                                         login={this.props.login}/>
+                                );
+                            case 'carousel':
+                                return (
+                                    <CarouselCard
+                                        key={no}
+                                        items={card.items}/>
                                 );
                             default:
                                 return null;

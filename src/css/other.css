@@ -5,3 +5,7 @@
 .border-none {
     border: none;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+}

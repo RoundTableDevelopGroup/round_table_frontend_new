@@ -11,8 +11,16 @@
     background-color: yellow;
 }
 
+.bg-color-plain {
+    background-color: #77839c;
+}
+
 .bg-color-green {
     background-color: green;
+}
+
+.bg-color-dark-blue {
+    background-color: #364d79;
 }
 
 .bg-transparent {
@@ -38,6 +46,10 @@
 
 .color-text {
     color: #646464;
+}
+
+.color-white {
+    color: white;
 }
 
 /* 阴影 */
