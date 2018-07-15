@@ -34,8 +34,8 @@ export class IndexPage extends React.Component {
         let col1 = (
             <Col
                 span={16}>
-                <ToolBLock/>
-                <CardList/>
+                <ToolBLock history={this.props.history}/>
+                <CardList history={this.props.history}/>
             </Col>
         );
         let col2 = (
@@ -44,15 +44,15 @@ export class IndexPage extends React.Component {
                 className={'pl-12px'}>
                 <SideList/>
                 <Affix offsetTop={62}>
-                    <AboutBlock/>
+                    <AboutBlock history={this.props.history}/>
                 </Affix>
             </Col>
         );
 
         return (
             <TransparentLayout>
-                <MainNav/>
-                <LeaveBlankLayout>
+                <MainNav history={this.props.history}/>
+                <LeaveBlankLayout history={this.props.history}>
                     <Row>
                         {col1}
                         {col2}
