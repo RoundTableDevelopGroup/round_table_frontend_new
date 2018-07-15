@@ -42,7 +42,7 @@ export class IndexPage extends React.Component {
             <Col
                 span={8}
                 className={'pl-12px'}>
-                <SideList/>
+                <SideList history={this.props.history}/>
                 <Affix offsetTop={62}>
                     <AboutBlock history={this.props.history}/>
                 </Affix>
