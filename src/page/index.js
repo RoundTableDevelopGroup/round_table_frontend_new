@@ -6,7 +6,7 @@ import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
 import { CardList } from "../component/list/card-list";
 import { ToolBLock } from "../component/block/tool-block";
 import { SideList } from "../component/list/side-list";
-import { AboutBlock } from "../component/block/about-block";
+import { AboutBlock } from "../component/block/about-block"; 
 
 export class IndexPage extends React.Component {
 
