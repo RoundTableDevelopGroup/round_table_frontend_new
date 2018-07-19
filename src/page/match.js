@@ -1,46 +1,31 @@
 import React from 'react';
-import { Row, Col, Affix } from 'antd';
 import { TransparentLayout } from "../component/layout/transparent-layout";
-import { MainNav } from "../component/nav/main-nav";
 import { LeaveBlankLayout } from "../component/layout/leave-blank-layout";
-import { CardList } from "../component/list/card-list";
-import { ToolBLock } from "../component/block/tool-block";
-import { SideList } from "../component/list/side-list";
-import { AboutBlock } from "../component/block/about-block"; 
+import { Col } from 'antd';
+import {ToolBLock} from "../component/block/tool-block";
+import {CardList} from "../component/list/card-list";
+import {SideList} from "../component/list/side-list";
 
-export class IndexPage extends React.Component {
+export class MatchPage extends React.Component {
 
-    /**
-     * 构造
-     * @param props - 组件属性
-     */
+    // 构造
     constructor(props) {
-
         super(props);
 
-        this.state = {
-
-        };
-
+        this.state = {};
     }
 
-    /**
-     * 渲染函数
-     * @returns {*}
-     */
     render() {
 
-        // 列
-        let col1 = (
-            <Col
-                span={16}>
+        let leftCol = (
+            <Col span={16}>
                 <ToolBLock history={this.props.history}/>
                 <CardList
                     history={this.props.history}
-                    source={'/request/card-list/index'}/>
+                    source={'/request/card-list/match'}/>
             </Col>
         );
-        let col2 = (
+        let rightCol = (
             <Col
                 span={8}
                 className={'pl-12px'}>
@@ -56,13 +41,12 @@ export class IndexPage extends React.Component {
                 <MainNav history={this.props.history}/>
                 <LeaveBlankLayout history={this.props.history}>
                     <Row>
-                        {col1}
-                        {col2}
+                        {leftCol}
+                        {rightCol}
                     </Row>
                 </LeaveBlankLayout>
             </TransparentLayout>
         );
 
     }
-
 }

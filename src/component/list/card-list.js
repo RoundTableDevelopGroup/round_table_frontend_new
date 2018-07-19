@@ -36,95 +36,103 @@ export class CardList extends React.Component {
 
         // TODO 发送请求获取卡片
         // TODO 将 Carousel 替换成卡片
-        // 先假装获取一张卡片
-        this.setState({
-            cards: [{
-                type: 'carousel',
-                items: [(
-                    <CarouselText
-                        title={'title 1'}/>
-                ), (
-                    <CarouselText
-                        title={'title 2'}/>
-                ), (
-                    <CarouselText
-                        title={'title 3'}/>
-                ), (
-                    <CarouselText
-                        title={'title 4'}/>
-                )]
-            }, {
-                type: 'post',
-                title: '测试标题',
-                time: '2小时前',
-                channelLink: '#',
-                link: '#',
-                channel: '绝地求生',
-                summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
-                userInfo: {
-                    username: '可见影子',
-                    address: '#'
-                },
-                liked: true,
-                linkNum: 250
-            }, {
-                type: 'post',
-                title: '测试标题',
-                time: '2小时前',
-                channelLink: '#',
-                link: '#',
-                channel: '绝地求生',
-                summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
-                userInfo: {
-                    username: '可见影子',
-                    address: '#'
-                },
-                liked: true,
-                linkNum: 250
-            }, {
-                type: 'post',
-                title: '测试标题',
-                time: '2小时前',
-                channelLink: '#',
-                link: '#',
-                channel: '绝地求生',
-                summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
-                userInfo: {
-                    username: '可见影子',
-                    address: '#'
-                },
-                liked: true,
-                linkNum: 250
-            }, {
-                type: 'post',
-                title: '测试标题',
-                time: '2小时前',
-                channelLink: '#',
-                link: '#',
-                channel: '绝地求生',
-                summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
-                userInfo: {
-                    username: '可见影子',
-                    address: '#'
-                },
-                liked: true,
-                linkNum: 250
-            }, {
-                type: 'post',
-                title: '测试标题',
-                time: '2小时前',
-                channelLink: '#',
-                link: '#',
-                channel: '绝地求生',
-                summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
-                userInfo: {
-                    username: '可见影子',
-                    address: '#'
-                },
-                liked: true,
-                linkNum: 250
-            }]
-        });
+        switch (this.props.source) {
+            case '/request/card-list/index':
+                // 先假装获取一张卡片
+                this.setState({
+                    cards: [{
+                        type: 'carousel',
+                        items: [(
+                            <CarouselText
+                                title={'title 1'}/>
+                        ), (
+                            <CarouselText
+                                title={'title 2'}/>
+                        ), (
+                            <CarouselText
+                                title={'title 3'}/>
+                        ), (
+                            <CarouselText
+                                title={'title 4'}/>
+                        )]
+                    }, {
+                        type: 'post',
+                        title: '测试标题',
+                        time: '2小时前',
+                        channelLink: '#',
+                        link: '#',
+                        channel: '绝地求生',
+                        summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                        userInfo: {
+                            username: '可见影子',
+                            address: '#'
+                        },
+                        liked: true,
+                        linkNum: 250
+                    }, {
+                        type: 'post',
+                        title: '测试标题',
+                        time: '2小时前',
+                        channelLink: '#',
+                        link: '#',
+                        channel: '绝地求生',
+                        summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                        userInfo: {
+                            username: '可见影子',
+                            address: '#'
+                        },
+                        liked: true,
+                        linkNum: 250
+                    }, {
+                        type: 'post',
+                        title: '测试标题',
+                        time: '2小时前',
+                        channelLink: '#',
+                        link: '#',
+                        channel: '绝地求生',
+                        summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                        userInfo: {
+                            username: '可见影子',
+                            address: '#'
+                        },
+                        liked: true,
+                        linkNum: 250
+                    }, {
+                        type: 'post',
+                        title: '测试标题',
+                        time: '2小时前',
+                        channelLink: '#',
+                        link: '#',
+                        channel: '绝地求生',
+                        summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                        userInfo: {
+                            username: '可见影子',
+                            address: '#'
+                        },
+                        liked: true,
+                        linkNum: 250
+                    }, {
+                        type: 'post',
+                        title: '测试标题',
+                        time: '2小时前',
+                        channelLink: '#',
+                        link: '#',
+                        channel: '绝地求生',
+                        summary: '测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落测试段落',
+                        userInfo: {
+                            username: '可见影子',
+                            address: '#'
+                        },
+                        liked: true,
+                        linkNum: 250
+                    }]
+                });
+                break;
+            case '/request/card-list/match':
+                break;
+            default:
+                break;
+        }
 
     }
 
